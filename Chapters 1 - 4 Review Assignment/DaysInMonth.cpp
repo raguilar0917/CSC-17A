@@ -4,6 +4,7 @@ using namespace std;
 int main(){
     int year, month; //vars for inputs
     int leapDay = 0;
+    int months[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
 
     do{
 
@@ -25,48 +26,10 @@ int main(){
             leapDay = 1;
         }
     }
-    cout<<leapDay<<endl;
-    
-    switch(month){
-        case 1:
-            cout<<31;
-            break;
-        case 2:
-            cout<<28+leapDay;
-            break;
-        case 3:
-            cout<<31;
-            break;
-        case 4:
-            cout<<30;
-            break;
-        case 5:
-            cout<<31;
-            break;
-        case 6:
-            cout<<30;
-            break;
-        case 7:
-            cout<<31;
-            break;
-        case 8:
-            cout<<31;
-            break;
-        case 9:
-            cout<<30;
-            break;
-        case 10:
-            cout<<31;
-            break;
-        case 11:
-            cout<<30;
-            break;
-        case 12:
-            cout<<31;
-            break;
-
-        default:
-            break;
+    if(month == 2){
+        cout<<months[month-1] + leapDay<<endl;
+    }else{
+        cout<<months[month]<<endl;
     }
 
 }
